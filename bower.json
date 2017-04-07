@@ -1,0 +1,23 @@
+{
+  "name": "mu-jquery-capture",
+  "authors": [
+    "Mikael Karon <mikael@karon.se>"
+  ],
+  "description": "A jQuery plugin for capturing event results",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "jquery": "^3.0.0"
+  },
+  "devDependencies": {
+    "qunit": "^2.3.0",
+    "jquery": "^3.2.1"
+  },
+  "version": "0.0.1"
+}

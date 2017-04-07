@@ -1,0 +1,18 @@
+(function (modules, root, factory) {
+  if (typeof define === "function" && define.amd) {
+    define(modules, factory);
+  } else if (typeof module === "object" && module.exports) {
+    module.exports = factory.apply(root, modules.map(require));
+  } else {
+    root["mu-jquery-capture/jquery.event.add"] = factory.apply(root, modules.map(function (m) {
+      return root[m.replace(/^\./, "mu-jquery-capture")];
+    }));
+  }
+})(["./capture"], this, function (capture) {
+  return function (add) {
+    var $ = this;
+    return function (elem, types, handler, data, selector) {
+      return add.call(this, elem, types, capture.call($, handler), data, selector);
+    }
+  }
+});
