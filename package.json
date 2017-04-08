@@ -1,6 +1,6 @@
 {
   "name": "mu-jquery-capture",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A jQuery plugin for capturing event results",
   "main": "",
   "scripts": {
@@ -16,8 +16,7 @@
     "url": "https://github.com/mu-lib/mu-jquery-capture/issues"
   },
   "homepage": "https://github.com/mu-lib/mu-jquery-capture#readme",
-  "dependencies": {
-  },
+  "dependencies": {},
   "peerDependencies": {
     "jquery": "^3.0.0"
   },
