@@ -1,6 +1,6 @@
 {
   "name": "mu-jquery-capture",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A jQuery plugin for capturing event results",
   "main": "",
   "scripts": {
