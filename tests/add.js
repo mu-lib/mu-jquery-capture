@@ -22,7 +22,7 @@
 
   QUnit.test("run by calling", function (assert) {
     var $event = $.event;
-    var $add = add.call($, $event.add);
+    var $add = add($);
     var $element = $("<div>");
     var element = $element.get(0);
 
@@ -45,7 +45,7 @@
 
     assert.expect(1);
 
-    $event.add = add.call($, $add);
+    $event.add = add($);
 
     $element
       .on("test", function () {
