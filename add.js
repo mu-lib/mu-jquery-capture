@@ -4,7 +4,7 @@
   } else if (typeof module === "object" && module.exports) {
     module.exports = factory.apply(root, modules.map(require));
   } else {
-    root["mu-jquery-capture/jquery.event.add"] = factory.apply(root, modules.map(function (m) {
+    root["mu-jquery-capture/add"] = factory.apply(root, modules.map(function (m) {
       return root[m.replace(/^\./, "mu-jquery-capture")];
     }));
   }

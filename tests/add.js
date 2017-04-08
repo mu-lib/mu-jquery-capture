@@ -4,7 +4,7 @@
   } else if (typeof module === "object" && module.exports) {
     module.exports = factory.apply(root, modules.map(require));
   } else {
-    root["mu-jquery-capture/tests/jquery.event.add"] = factory.apply(root, modules.map(function (m) {
+    root["mu-jquery-capture/tests/add"] = factory.apply(root, modules.map(function (m) {
       return this[m] || root[m.replace(/^\.{2}/, "mu-jquery-capture")];
     }, {
         "jquery": root.jQuery,
@@ -14,11 +14,11 @@
 })([
   "qunit",
   "jquery",
-  "../jquery.event.add"
+  "../add"
 ], this, function (QUnit, $, add) {
   var root = this;
 
-  QUnit.module("mu-jquery-capture/jquery.event.add");
+  QUnit.module("mu-jquery-capture/add");
 
   QUnit.test("run by calling", function (assert) {
     var $event = $.event;
