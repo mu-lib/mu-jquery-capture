@@ -179,4 +179,22 @@
       .appendTo($element)
       .trigger("test");
   });
+
+  QUnit.test("return false prevents native bubbles", function(assert) {
+    assert.expect(1);
+
+    var $element = $("<div>")
+      .on("submit", capture.call($, function() {
+        assert.notOk(true, "handler should not be called");
+      }))
+    
+    $("<form><button type='submit'></button></form>")
+      .on("submit", capture.call($, function () {
+        assert.ok(true, "handler should be called");
+        return false;
+      }))
+      .appendTo($element)
+      .find("button")
+      .click();
+  });
 });
