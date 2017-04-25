@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.0.0"></a>
+# [3.0.0](https://github.com/mu-lib/mu-jquery-capture/compare/v2.0.1...v3.0.0) (2017-04-25)
+
+
+### Bug Fixes
+
+* change signature of capture to match lib standard ([ac769b4](https://github.com/mu-lib/mu-jquery-capture/commit/ac769b4))
+
+
+### BREAKING CHANGES
+
+* signature change from `capture.call($, fn)` to `capture($, fn)`.
+
+
+
 <a name="2.0.1"></a>
 ## [2.0.1](https://github.com/mu-lib/mu-jquery-capture/compare/v2.0.0...v2.0.1) (2017-04-20)
 
