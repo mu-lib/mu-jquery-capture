@@ -24,7 +24,7 @@
     assert.expect(2);
 
     var $element = $("<div>")
-      .on("test", capture.call($, function () {
+      .on("test", capture($, function () {
         assert.ok(true, "handler called");
       }));
 
@@ -43,19 +43,19 @@
     var array = [];
 
     var $element = $("<div>")
-      .on("test", capture.call($, function () {
+      .on("test", capture($, function () {
         return number;
       }))
-      .on("test", capture.call($, function () {
+      .on("test", capture($, function () {
         return boolean;
       }))
-      .on("test", capture.call($, function () {
+      .on("test", capture($, function () {
         return string;
       }))
-      .on("test", capture.call($, function () {
+      .on("test", capture($, function () {
         return object;
       }))
-      .on("test", capture.call($, function () {
+      .on("test", capture($, function () {
         return [array];
       }));
 
@@ -66,19 +66,19 @@
     assert.expect(1);
 
     var $element = $("<div>")
-      .on("test", capture.call($, function () {
+      .on("test", capture($, function () {
         return "one"
       }))
-      .on("test", capture.call($, function () {
+      .on("test", capture($, function () {
         return undefined;
       }))
-      .on("test", capture.call($, function () {
+      .on("test", capture($, function () {
         return false;
       }))
-      .on("test", capture.call($, function () {
+      .on("test", capture($, function () {
         return [];
       }))
-      .on("test", capture.call($, function () {
+      .on("test", capture($, function () {
         return "two";
       }));
 
@@ -89,13 +89,13 @@
     assert.expect(1);
 
     var $element = $("<div>")
-      .on("test", capture.call($, function () {
+      .on("test", capture($, function () {
         return "one";
       }))
-      .on("test", capture.call($, function () {
+      .on("test", capture($, function () {
         return ["two", "three"];
       }))
-      .on("test", capture.call($, function () {
+      .on("test", capture($, function () {
         return "four";
       }));
 
@@ -106,13 +106,13 @@
     assert.expect(1);
 
     var $element = $("<div>")
-      .on("test", capture.call($, function () {
+      .on("test", capture($, function () {
         return "one"
       }))
-      .on("test", capture.call($, function ($event) {
+      .on("test", capture($, function ($event) {
         $event.stopImmediatePropagation();
       }))
-      .on("test", capture.call($, function () {
+      .on("test", capture($, function () {
         return "two";
       }));
 
@@ -125,10 +125,10 @@
     assert.expect(1);
 
     var $element = $("<div>")
-      .on("test", capture.call($, function () {
+      .on("test", capture($, function () {
         return "one";
       }))
-      .on("test", capture.call($, function () {
+      .on("test", capture($, function () {
         return "two";
       }))
       .on("test", function ($event) {
@@ -142,7 +142,7 @@
     assert.expect(1);
 
     var $element = $("<div>")
-      .on("test", capture.call($, function () {
+      .on("test", capture($, function () {
         return "parent";
       }))
       .on("test", function ($event) {
@@ -150,7 +150,7 @@
       });
 
     var $child = $("<div>")
-      .on("test", capture.call($, function () {
+      .on("test", capture($, function () {
         return "child";
       }))
       .appendTo($element);
@@ -162,15 +162,15 @@
     assert.expect(1);
 
     var $element = $("<div>")
-      .on("test", capture.call($, function () {
+      .on("test", capture($, function () {
         assert.notOk(true, "handler should not be called");
       }));
 
     var $child = $("<div>")
-      .on("test", capture.call($, function () {
+      .on("test", capture($, function () {
         return "one";
       }))
-      .on("test", capture.call($, function () {
+      .on("test", capture($, function () {
         return false;
       }))
       .on("test", function ($event) {
@@ -180,16 +180,16 @@
       .trigger("test");
   });
 
-  QUnit.test("return false prevents native bubbles", function(assert) {
+  QUnit.test("return false prevents native bubbles", function (assert) {
     assert.expect(1);
 
     var $element = $("<div>")
-      .on("submit", capture.call($, function() {
+      .on("submit", capture($, function () {
         assert.notOk(true, "handler should not be called");
       }))
-    
+
     $("<form><button type='submit'></button></form>")
-      .on("submit", capture.call($, function () {
+      .on("submit", capture($, function () {
         assert.ok(true, "handler should be called");
         return false;
       }))

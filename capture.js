@@ -9,7 +9,7 @@
     }));
   }
 })([], this, function () {
-  return function (fn) {
+  return function ($, fn) {
     function proxy($event) {
       var $result = $event.result;
       var ret = fn.apply(this, arguments);
@@ -23,7 +23,7 @@
       return ret === undefined ? $result || [] : ($result || Array.prototype).concat(ret);
     }
 
-    proxy.guid = fn.guid = fn.guid || this.guid++;
+    proxy.guid = fn.guid = fn.guid || $.guid++;
 
     return proxy;
   }
