@@ -38,6 +38,28 @@
     assert.deepEqual($element.triggerHandler("test"), ["one", "two"], "result matches");
   });
 
+  QUnit.test("handler.handler contains callback", function (assert) {
+    var $event = $.event;
+    var $add = add($);
+    var $element = $("<div>");
+    var element = $element.get(0);
+
+    assert.expect(1);
+
+    $add.call($event, element, "test", {
+      "handler": function () {
+        return "one"
+      }
+    });
+    $add.call($event, element, "test", {
+      "handler": function () {
+        return "two"
+      }
+    });
+
+    assert.deepEqual($element.triggerHandler("test"), ["one", "two"], "result matches");
+  });
+
   QUnit.test("replace $.event.add", function (assert) {
     var $event = $.event;
     var $add = $event.add;
