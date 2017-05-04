@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.0.1"></a>
+## [3.0.1](https://github.com/mu-lib/mu-jquery-capture/compare/v3.0.0...v3.0.1) (2017-05-04)
+
+
+### Bug Fixes
+
+* handler.handler has real handler ([c96727a](https://github.com/mu-lib/mu-jquery-capture/commit/c96727a))
+
+
+
 <a name="3.0.0"></a>
 # [3.0.0](https://github.com/mu-lib/mu-jquery-capture/compare/v2.0.1...v3.0.0) (2017-04-25)
 
