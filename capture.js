@@ -1,14 +1,12 @@
-(function (modules, root, factory) {
+(function (root, factory) {
   if (typeof define === "function" && define.amd) {
-    define(modules, factory);
+    define([], factory);
   } else if (typeof module === "object" && module.exports) {
-    module.exports = factory.apply(root, modules.map(require));
+    module.exports = factory();
   } else {
-    root["mu-jquery-capture/capture"] = factory.apply(root, modules.map(function (m) {
-      return root[m];
-    }));
+    root["mu-jquery-capture/capture"] = factory();
   }
-})([], this, function () {
+})(this, function () {
   return function ($, fn) {
     function proxy($event) {
       var $result = $event.result;
