@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.0.3"></a>
+## [3.0.3](https://github.com/mu-lib/mu-jquery-capture/compare/v3.0.2...v3.0.3) (2017-10-24)
+
+
+### Bug Fixes
+
+* **test:** attach form to fixture ([41fe7dc](https://github.com/mu-lib/mu-jquery-capture/commit/41fe7dc))
+* bump devDeps ([b3af320](https://github.com/mu-lib/mu-jquery-capture/commit/b3af320))
+
+
+
 <a name="3.0.2"></a>
 ## [3.0.2](https://github.com/mu-lib/mu-jquery-capture/compare/v3.0.1...v3.0.2) (2017-06-16)
 
