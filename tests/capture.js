@@ -183,10 +183,12 @@
   QUnit.test("return false prevents native bubbles", function (assert) {
     assert.expect(1);
 
+    var $fixture = $("#qunit-fixture");
     var $element = $("<div>")
       .on("submit", capture($, function () {
         assert.notOk(true, "handler should not be called");
       }))
+      .appendTo($fixture);
 
     $("<form><button type='submit'></button></form>")
       .on("submit", capture($, function () {
